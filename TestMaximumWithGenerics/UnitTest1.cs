@@ -6,6 +6,9 @@ namespace TestMaximumWithGenerics
     [TestClass]
     public class MaxValueTest
     {
+        /// <summary>
+        /// Givens the integer array should return largest integer.
+        /// </summary>
         [TestMethod]
         public void GivenIntegerArray_ShouldReturnLargestInteger()
         {
@@ -16,7 +19,9 @@ namespace TestMaximumWithGenerics
 
             Assert.AreEqual(10, max);
         }
-
+        /// <summary>
+        /// Givens the double array should return largest double.
+        /// </summary>
         [TestMethod]
         public void GivenDoubleArray_ShouldReturnLargestDouble()
         {
@@ -27,7 +32,9 @@ namespace TestMaximumWithGenerics
 
             Assert.AreEqual(25.9, max);
         }
-
+        /// <summary>
+        /// Givens the string array should return largest string.
+        /// </summary>
         [TestMethod]
         public void GivenStringArrayShouldReturnLargestString()
         {
