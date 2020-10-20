@@ -53,13 +53,38 @@ namespace FindMaximum
             }
             return a;
         }
+
+        public static string GetMaxString(string a, string b, string c)
+        {
+            if (a.CompareTo(b) > 0 && a.CompareTo(c) > 0 ||
+                a.CompareTo(b) >= 0 && a.CompareTo(c) > 0 ||
+                a.CompareTo(b) > 0 && a.CompareTo(c) >= 0)
+            {
+                return a;
+            }
+
+            if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0 ||
+                b.CompareTo(a) >= 0 && b.CompareTo(c) > 0 ||
+                b.CompareTo(a) > 0 && b.CompareTo(c) >= 0)
+            {
+                return b;
+            }
+
+            if (c.CompareTo(a) > 0 && c.CompareTo(b) > 0 ||
+                c.CompareTo(a) >= 0 && c.CompareTo(b) > 0 ||
+                c.CompareTo(a) > 0 && c.CompareTo(b) >= 0)
+            {
+                return c;
+            }
+            return a;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Find Maximum program!");
 
             Console.WriteLine("Maximum Integer: " + GetMaxInt(4, 2, 8));
             Console.WriteLine("Maximum Float Value: " + GetMaxFloat(11.4, 334.6, 234.8));
-            //Console.WriteLine(GetMaxString("12", "25", "23"));
+            Console.WriteLine("Maximum String is: " + GetMaxString("Apple", "Banana", "Grapes"));
         }
     }
 }

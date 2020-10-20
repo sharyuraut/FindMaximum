@@ -10,7 +10,7 @@ namespace TestMaximumWithGenerics
         [TestMethod]
         public void GivenInteger_MaxFirstNumber_ShouldReturnFirstNumber()
         {
-            Program maximumNumber = new Program();
+            Program Program = new Program();
 
             int max = Program.GetMaxInt(10, 2, -47);
 
@@ -21,7 +21,7 @@ namespace TestMaximumWithGenerics
         [TestMethod]
         public void GivenInteger_MaxSecondNumber_ShouldReturnSecondNumber()
         {
-            Program maximumNumber = new Program();
+            Program Program = new Program();
 
             int max = Program.GetMaxInt(1, 5, 2);
 
@@ -32,7 +32,7 @@ namespace TestMaximumWithGenerics
         [TestMethod]
         public void GivenInteger_MaxThirdNumber_ShouldReturnThirdNumber()
         {
-            Program maximumNumber = new Program();
+            Program Program = new Program();
 
             int max = Program.GetMaxInt(-11, -20, 45);
 
@@ -61,6 +61,30 @@ namespace TestMaximumWithGenerics
         {
             double max = Program.GetMaxFloat(15.9, 20.2, 45.5);
             Assert.AreEqual(45.5, max);
+        }
+
+        //TC 3.1
+        [TestMethod]
+        public void GivenString_MaxFirstString_ShouldReturnFirstString()
+        {
+            string max = Program.GetMaxString("88.8", "55.99", "-111");
+            Assert.AreEqual("88.8", max);
+        }
+
+        //TC 3.2
+        [TestMethod]
+        public void GivenString_MaxSecondString_ShouldReturnSecondString()
+        {
+            string max = Program.GetMaxString("2.22", "99", "55");
+            Assert.AreEqual("99", max);
+        }
+
+        //TC 3.3
+        [TestMethod]
+        public void GivenString_MaxThirdString_ShouldReturnThirdString()
+        {
+            string max = Program.GetMaxString("4.44", "33.3", "99.99");
+            Assert.AreEqual("99.99", max);
         }
     }
 }
